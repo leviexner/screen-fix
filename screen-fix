@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while getopts 'lma' OPTION; do
+	case "$OPTION" in
+	a)
+	xrandr --auto
+	;;
+	l)
+	xrandr --output eDP-1 --right-of DP-2-3
+	;;
+	m)
+	xrandr --output eDP-1 --off
+	;;
+	?)
+	echo "no usable flags, try again"
+	;;
+	esac
+done
+shift "$((OPTIND -1))"
