@@ -6,7 +6,7 @@ while getopts 'lma' OPTION; do
 	xrandr --auto
 	;;
 	l)
-	xrandr --output eDP-1 --right-of DP-2-3
+	xrandr --output eDP-1 --right-of DP-2-3 && ~/.fehbg
 	;;
 	m)
 	xrandr --output eDP-1 --off
