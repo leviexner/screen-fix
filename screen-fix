@@ -1,9 +1,12 @@
 #!/bin/bash
 
-while getopts 'lma' OPTION; do
+while getopts 'wlma' OPTION; do
 	case "$OPTION" in
 	a)
 	xrandr --auto
+	;;
+	w)
+	xrandr --output eDP-1 --below DP-2-3 && ~/.fehbg
 	;;
 	l)
 	xrandr --output eDP-1 --right-of DP-2-3 && ~/.fehbg
